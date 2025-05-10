@@ -8,7 +8,7 @@ This project builds a complete data analysis and machine learning pipeline to un
 It includes:
 
 - SQL for data cleaning and preparation
-- Power BI for customer profiling and churn visualization
+- Power BI for customer profiling and churn visualization (You can quickly access the dashboard online here: https://app.powerbi.com/Redirect?action=OpenApp&appId=f29a2540-06ac-49d1-a60a-febdf73c51c7&ctid=588b13a3-653b-4cf7-8ac0-59847eb2dc88&experience=power-bi )
 - Python and Random Forest for churn prediction
 - An interactive dashboard for visualizing predicted churners
 
