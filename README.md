@@ -98,16 +98,16 @@ Output: 301 newly Joined customers are predicted to be churned over 411  newly j
 ---
 
 ## ⚙️ Dependencies
-pandas 
-numpy 
-matplotlib.pyplot
-seaborn
-RandomForestClassifier
-OneHotEncoder
-joblib
-TargetEncoder
-CatBoostEncoder
-SMOTE
+- pandas 
+- numpy 
+- matplotlib.pyplot
+- seaborn
+- RandomForestClassifier
+- OneHotEncoder
+- joblib
+- TargetEncoder
+- CatBoostEncoder
+- SMOTE
 
 
 
