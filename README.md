@@ -117,6 +117,7 @@ Output: 301 newly Joined customers are predicted to be churned over 411  newly j
 - `Prediction1.csv`: Final output table of newly joined customers predicted to churn
 - `Churn Analysis.pbix`: Power BI dashboard file
 - `README.md`: Project documentation
+- `SQL Queries.docx`: SQL queries
 
 
 
