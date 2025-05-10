@@ -51,16 +51,16 @@ The dataset consists of customer information from a telecom company with the fol
 1. **ETL with SQL**  
    - Load and clean the raw dataset  
    - Handle missing values  
-   - Split data into two tables:  
-     - `Table 1`: Churned & Stayed Customers (used for training)  
-     - `Table 2`: Newly Joined Customers (used for prediction)
+   - Split data into two datasets:  
+     - `vw_ChurnData`: Churned & Stayed Customers (used for training)  
+     - `vw_JoinData`: Newly Joined Customers (used for prediction)
 
 2. **Data Visualization with Power BI**  
-   - Build dashboard showing overview of customer demographics, services, payment, and churn
+   - Build a dashboard showing the overview of customer demographics, services, payment, and churn
 
 3. **Churn Prediction with Python**
-   - Trained a Random Forest model on `Table 1`
-   - Predicted churn on `Table 2`
+   - Trained a Random Forest model on `vw_ChurnData`
+   - Predicted churn on `vw_JoinData`
    - Exported results of predicted churners for dashboarding
 
 4. **Predicted Churner Dashboard**
@@ -77,6 +77,8 @@ Using a Random Forest Classifier on the training data:
 - **Recall**: 0.87 (Stayed), 0.72 (Churned)  
 - **F1 Score**: 0.88 (Stayed), 0.71 (Churned)
 
+Output: 301 newly Joined customers are predicted to be churned over 411  newly joined customers in total
+
 ### 🔍 Top 5 Important Features
 1. Contract Type  
 2. Total Revenue  
@@ -87,59 +89,28 @@ Using a Random Forest Classifier on the training data:
 ---
 
 ## 📈 Key Insights (From Dashboard)
-
-- Majority of churners are associated with **Fiber Optic Internet** and **Month-to-Month contracts**
-- Customers who had **high total revenue and monthly charges** were more likely to churn
-- Some churners cited **network reliability** and **product dissatisfaction** as reasons
-
-### 💡 Recommendations
-
-- Offer **loyalty plans** or **discounted contracts** to Fiber Optic users
-- Investigate service quality in states with higher churn rates
-- Improve onboarding and after-sales support to reduce early churn
+- High churn with fiber-optic users (41.1%)
+- Month-to-month contract holders churn at 46%
+- 70–80% churn among users of Internet, Phone, Paperless Billing, and Unlimited Data services
+- Major churn reasons: competitor offers (44%) and dissatisfaction (34%)
+  
 
 ---
 
 ## ⚙️ Dependencies
+pandas 
+numpy 
+matplotlib.pyplot
+seaborn
+RandomForestClassifier
+OneHotEncoder
+joblib
+TargetEncoder
+CatBoostEncoder
+SMOTE
 
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.preprocessing import OneHotEncoder
-import joblib
-from category_encoders import TargetEncoder, CatBoostEncoder
-from sklearn.model_selection import train_test_split, KFold
-from imblearn.over_sampling import SMOTE
-import warnings
 
-warnings.filterwarnings('ignore')
-```
 
 ---
 
-## 📂 Repository Contents
 
-- `telecom_churn_analysis.ipynb`: Python notebook for model training and evaluation
-- `churn_prediction.csv`: Final output table of newly joined customers predicted to churn
-- `Customer_Churn_Dashboard.pbix`: Power BI dashboard files (2 versions: Overview + Prediction)
-- `README.md`: Project documentation
-
----
-
-## 📎 How to Use
-
-1. Clone the repository
-2. Open the `.ipynb` file to explore the machine learning process
-3. Open `.pbix` files in Power BI Desktop to interact with dashboards
-4. View predictions in the `churn_prediction.csv` file
-
----
-
-## 👨‍💻 Author
-
-*Your Name Here* — Data Analyst | Passionate about turning data into action  
-📫 [Your Email or LinkedIn]
