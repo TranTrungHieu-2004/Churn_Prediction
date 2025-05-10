@@ -109,6 +109,15 @@ Output: 301 newly Joined customers are predicted to be churned over 411  newly j
 - CatBoostEncoder
 - SMOTE
 
+---
+📂 Repository Contents
+- `Customer_Data.csv`: Raw dataset
+- `Churn_Prediction.csv`: Dataset used in modeling (with sheet 1 is Churn customer, sheet 2 is newly joint customer) 
+- `Random Forest.ipynb`: Python notebook for model training and evaluation
+- `Prediction1.csv`: Final output table of newly joined customers predicted to churn
+- `Churn Analysis.pbix`: Power BI dashboard file
+- `README.md`: Project documentation
+
 
 
 ---
